@@ -71,6 +71,11 @@ services:
           - amf.free5gc.org
     depends_on:
       - free5gc-nrf
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
 
   free5gc-ausf:
     container_name: ausf
